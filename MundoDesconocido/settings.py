@@ -79,8 +79,14 @@ WSGI_APPLICATION = 'MundoDesconocido.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        "CLIENT": {
+            'name': 'BDSimple',
+            'host': 'mongodb+srv://enrique:ufvpassword@cluster0.vwexh.mongodb.net/BDSimple?retryWrites=true&w=majority',
+            "username": 'enrique',
+            'password': 'ufvpassword',
+            'authMechanism': 'SCRAM-SHA-1',
+        },
     }
 }
 
