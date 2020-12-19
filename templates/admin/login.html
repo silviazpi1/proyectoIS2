@@ -21,7 +21,7 @@
   </p>
   {% endif %}
   <div  id="container">
-    <h1 class="login" style="text-transform:uppercase; font-size:2rem; text-align:center">LogIn</h1>
+    <h1 class="login" style="text-transform:uppercase; font-size:2rem; text-align:center">Acceso a usuarios</h1>
   <form class="login" action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
     <div class="form-row">
       {{ form.username.errors }} {{ form.username.label_tag }} {{ form.username }}
