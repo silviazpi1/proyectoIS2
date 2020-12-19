@@ -21,14 +21,16 @@
         <h1><a href="/index">Mundo Desconocido</a></h1>
         <nav class="navMenu">
             <ul>
-                <li><a class="aCurrent" href="/index">Inicio</a></li>
-                <li><a href="/about">Sobre nosotros</a></li>
-                <li><a href="/admin">Iniciar sesión</a></li>
+                <li><a class="navElement" href="/index">Inicio</a></li>
+                <li><a class="navElement" href="/about">Sobre nosotros</a></li>
+                <li><a class="navElement" href="/admin">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
 
     {% block extra_body %}{% endblock %}
+
+    <script src="{% static 'js/navigation.js' %}"></script>
  
     {% block extra_scripts %}{% endblock extra_scripts %}
 </body>
