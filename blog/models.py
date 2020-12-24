@@ -3,7 +3,7 @@ from django.db import models
 class Post(models.Model):
     nombre = models.CharField(max_length=100)
     tag = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=500)
+    descripcion = models.CharField(max_length=10000)
     foto = models.ImageField(upload_to='productos', default='')
     slug = models.SlugField(unique=True)
 

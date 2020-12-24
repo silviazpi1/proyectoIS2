@@ -1,14 +1,11 @@
 {% extends "base.html" %}{% load i18n static %}
 <!DOCTYPE html> {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:" en-us " }}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %}>
-
-{% block extra_head %}
-{% block head_title %}{% endblock head_title %}
-
-<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'css/base.css' %}{% endblock %}"> {% block extrastyle %}{% endblock %} {% if LANGUAGE_BIDI %}
-<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'admin/css/rtl.css' %}{% endblock %}">{% endif %} {% block extrahead %}{% endblock %} {% block responsive %}
+{% block head_title %}Mundo Desconocido{% endblock head_title %} {% block extra_head %} {% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin_style.css' %}"> {% endblock %} {% if LANGUAGE_BIDI %}
+<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'admin/css/rtl.css' %}{% endblock %}"> {% endif %} {% block extrahead %}{% endblock %} {% block responsive %}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}"> {% if LANGUAGE_BIDI %}
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}">{% endif %} {% endblock %} {% block blockbots %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}"> {% endif %} {% endblock %} {% block blockbots %}
 <meta name="robots" content="NONE,NOARCHIVE">{% endblock %} {% endblock %} {% load i18n %} {% block extra_body %}
 <!-- Container -->
 <div id="container" class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now " Z " %}">
@@ -22,8 +19,7 @@
         {% block usertools %} {% if has_permission %}
         <div id="user-tools">
             {% block welcome-msg %} {% trans 'Welcome,' %}
-            <strong>{% firstof user.get_short_name user.get_username %}</strong>. {% endblock %} {% block userlinks %} 
-            {% if user.is_active and user.is_staff %} {% url 'django-admindocs-docroot' as docsroot %} {% if docsroot %}
+            <strong>{% firstof user.get_short_name user.get_username %}</strong>. {% endblock %} {% block userlinks %} {% if user.is_active and user.is_staff %} {% url 'django-admindocs-docroot' as docsroot %} {% if docsroot %}
             <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> / {% endif %} {% endif %} {% if user.has_usable_password %}
             <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> / {% endif %}
             <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a> {% endblock %}
@@ -38,7 +34,7 @@
     {% endblock %} {% endif %} {% block messages %} {% if messages %}
     <ul class="messagelist">{% for message in messages %}
         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message|capfirst }}</li>
-            {% endfor %}</ul>
+        {% endfor %}</ul>
     {% endif %} {% endblock messages %}
 
     <!-- Content -->
