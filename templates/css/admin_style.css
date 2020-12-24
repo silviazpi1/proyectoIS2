@@ -785,7 +785,6 @@ table#change-history tbody th {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
     background: #fff;
     overflow: hidden;
 }
@@ -822,13 +821,13 @@ table#change-history tbody th {
 
 #user-tools {
     float: right;
-    padding: 0;
     margin: 0 0 0 20px;
     font-weight: 300;
     font-size: 11px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-align: right;
+    padding: 10px 40px;
 }
 
 #user-tools a {
