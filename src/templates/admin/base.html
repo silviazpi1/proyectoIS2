@@ -2,7 +2,7 @@
 <!DOCTYPE html> {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:" en-us " }}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %}>
 {% block head_title %}Mundo Desconocido{% endblock head_title %} {% block extra_head %} {% block extrastyle %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/admin_style.css' %}"> {% endblock %} {% if LANGUAGE_BIDI %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}"> {% endblock %} {% if LANGUAGE_BIDI %}
 <link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'admin/css/rtl.css' %}{% endblock %}"> {% endif %} {% block extrahead %}{% endblock %} {% block responsive %}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}"> {% if LANGUAGE_BIDI %}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}"> {% endif %} {% endblock %} {% block blockbots %}

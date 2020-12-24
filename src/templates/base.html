@@ -10,8 +10,8 @@
 
     <title>{% block head_title %} {% endblock %}</title>
 
-    <link href="{% static 'css/initialize_style.css' %}" rel="stylesheet">
-    <link href="{% static 'css/main_style.css' %}" rel="stylesheet"> {% block extra_head %}{% endblock %}
+    <link href="{% static 'css/initialize.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet"> {% block extra_head %}{% endblock %}
 </head>
 
 <body>
@@ -21,9 +21,9 @@
             <ul>
                 <li><a class="navElement" href="/index">Inicio</a></li>
                 <li><a class="navElement" href="/about">Sobre nosotros</a></li>
-                <li><a class="navElement" href="/admin">Iniciar sesión</a></li>
             </ul>
         </nav>
+        <a class="loginButton" href="/admin">Iniciar sesión</a>
     </header>
 
     {% block extra_body %}{% endblock %} {% block extra_scripts %}{% endblock extra_scripts %}
