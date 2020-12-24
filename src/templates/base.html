@@ -26,7 +26,11 @@
         <a class="loginButton" href="/admin">Iniciar sesión</a>
     </header>
 
-    {% block extra_body %}{% endblock %} {% block extra_scripts %}{% endblock extra_scripts %}
+    {% block extra_body %}{% endblock %}
+
+    <script src="{% static 'js/navigation.js' %}" />
+
+    {% block extra_scripts %}{% endblock extra_scripts %}
 </body>
 
 </html>
