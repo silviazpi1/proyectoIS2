@@ -12,9 +12,9 @@ def home(request):
 def about(request):
     return render(request, "about.html", {})
 
-""" def post(request, slug):
-    product = get_object_or_404(Post, slug=slug)
+def post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
     context = {
         'post': post
     }
-    return render(request, "post.html", context) """
+    return render(request, "post.html", context)

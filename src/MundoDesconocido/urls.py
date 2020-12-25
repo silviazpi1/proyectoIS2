@@ -19,7 +19,8 @@ from django.conf.urls.static import static
 from django.urls import path
 from blog.views import (
     home,
-    about)
+    about,
+    post)
 
     
 admin.site.site_header = "Mundo Desconocido"
@@ -32,4 +33,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('index/', home, name='home'),
     path('about/', about, name='about'),
+    path('<slug>/', post, name='post'),
 ]

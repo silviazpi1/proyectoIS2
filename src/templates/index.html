@@ -1,12 +1,5 @@
-{% extends "base.html" %}
-
-{% block head_title %}Mundo Desconocido{% endblock %}
-
-{% block extra_head %}
-<link href="/static/css/index.css" rel="stylesheet">
-{% endblock %}
-
-{% block extra_body %}
+{% extends "base.html" %} {% block head_title %}Mundo Desconocido{% endblock %} {% block extra_head %}
+<link href="/static/css/index.css" rel="stylesheet"> {% endblock %} {% block extra_body %}
 <div id="divContainer">
     <div class="dinNews">
         <div class="divSection">
@@ -23,8 +16,10 @@
                 <a href="#" class="imgNew">
                     <img src="/static/assets/images/planet_x.png">
                 </a>
-                <p>Tempora ut quia iste explicabo rem porro et. Quibusdam quo sint laudantium. Ut aliquam magnam magni ea aut libero odio dolor. Doloribus sunt occaecati aperiam incidunt. Laborum consequat aliquip mollit proident deserunt commodo incididunt nulla anim aliqua do. Cillum id id sint qui irure velit veniam qui velit velit officia nulla ea. Eiusmod et sit eu pariatur eiusmod nostrud.</p>
-                <p>Mollit quis Lorem ex nostrud sint magna veniam eiusmod. Adipisicing duis ex eu sit amet consequat veniam nulla eu commodo. Ipsum labore voluptate nisi ad consectetur occaecat ut irure amet proident exercitation. Aliqua aute commodo occaecat sint incididunt qui occaecat eu eiusmod dolore magna. Aliqua ut veniam qui non voluptate occaecat. Et tempor nisi mollit incididunt esse dolore et sunt aliquam magnam magni ea aut.</p>
+                <p>Tempora ut quia iste explicabo rem porro et. Quibusdam quo sint laudantium. Ut aliquam magnam magni ea aut libero odio dolor. Doloribus sunt occaecati aperiam incidunt. Laborum consequat aliquip mollit proident deserunt commodo incididunt
+                    nulla anim aliqua do. Cillum id id sint qui irure velit veniam qui velit velit officia nulla ea. Eiusmod et sit eu pariatur eiusmod nostrud.</p>
+                <p>Mollit quis Lorem ex nostrud sint magna veniam eiusmod. Adipisicing duis ex eu sit amet consequat veniam nulla eu commodo. Ipsum labore voluptate nisi ad consectetur occaecat ut irure amet proident exercitation. Aliqua aute commodo occaecat
+                    sint incididunt qui occaecat eu eiusmod dolore magna. Aliqua ut veniam qui non voluptate occaecat. Et tempor nisi mollit incididunt esse dolore et sunt aliquam magnam magni ea aut.</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis earum tenetur aliquid enim.</p>
             </section>
         </div>
@@ -34,63 +29,30 @@
             <input type="text" placeholder="Search">
         </form>
         <div class="divBubbles">
-           <span class="spnBubble">quibusdam</span>
-           <span class="spnBubble">suscipit</span>
-           <span class="spnBubble">totam</span>
-           <span class="spnBubble">numquam</span>
-           <span class="spnBubble">modi</span>
-           <span class="spnBubble">molestiae</span>
-           <span class="spnBubble">consequuntur ut eos</span>
-           <span class="spnBubble">alias</span>
-           <span class="spnBubble">repudiandae</span>
-           <span class="spnBubble">rerum</span>
-           <span class="spnBubble">velit sed quidem</span>
+            {% for post in posts %}
+            <span class="spnBubble">{{ post.tag }}</span> {% endfor %}
         </div>
         <hr class="hrHorizontal">
         <section>
             <h2>Recomendaciones</h2>
+            {% for post in posts %}
             <article class="artRecomendation">
-                <a href="#" class="imgRecomended">
+                <a href="{{ post.get_absolute_url }}" class="imgRecomended">
                     <img src="/static/assets/images/enhanced-7530-1432661400-12.jpg">
                 </a>
                 <header>
-                    <h3><a href="#">Cum qui quo velit non</a></h3>
-                    <time class="tmePublished" datetime="2017-08-11">Agosto 8, 2017</time>
+                    <h3><a href="#">{{ post.nombre }}</a></h3>
+                    <time class="tmePublished" datetime="{{ post.time }}">{{ post.time }}</time>
                     <a href="#" class="imgAuthor">
                         <img src="/static/assets/images/photo.jpg">
                     </a>
                 </header>
             </article>
-            <article class="artRecomendation">
-                <a href="#" class="imgRecomended">
-                    <img src="/static/assets/images/200w.gif">
-                </a>
-                <header>
-                    <h3><a href="#">Cum qui quo velit non</a></h3>
-                    <time class="tmePublished" datetime="2017-08-11">Agosto 7, 2017</time>
-                    <a href="#" class="imgAuthor">
-                        <img src="/static/assets/images/jl.png">
-                    </a>
-                </header>
-            </article>
-            <article class="artRecomendation">
-                <a href="#" class="imgRecomended">
-                    <img src="/static/assets/images/1182616.gif">
-                </a>
-                <header>
-                    <h3><a href="#">Cum qui quo velit non</a></h3>
-                    <time class="tmePublished" datetime="2017-08-11">Marzo 5, 2017</time>
-                    <a href="#" class="imgAuthor">
-                        <img src="/static/assets/images/Milenio-programa-Iker-Jimenez-temporadas_TINIMA20150628_0146_5.jpg">
-                    </a>
-                </header>
-            </article>
+            {% endfor %}
         </section>
     </div>
 </div>
-{% endblock extra_body %}
-
-{% block extra_scripts %}
+{% endblock extra_body %} {% block extra_scripts %}
 <script type="text/javascript">
     setCurrentPage(0);
 </script>
