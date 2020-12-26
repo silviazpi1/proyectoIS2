@@ -27,11 +27,18 @@
     </header>
 
     {% block extra_body %}{% endblock %}
+    <hr>
+    <footer>
+        <div id="divContainer">
+            <div class="divSection">
+                <h2>Mundo Desconocido</h2>
+            </div>
+        </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'js/navigation.js' %}"></script>
 
-    {% block extra_scripts %}{% endblock extra_scripts %}
+    <script src="{% static 'js/navigation.js' %}" /> {% block extra_scripts %}{% endblock extra_scripts %}
 </body>
 
 </html>

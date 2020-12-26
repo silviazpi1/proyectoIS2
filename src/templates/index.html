@@ -26,16 +26,17 @@
     </div>
     <div class="divPanel">
         <form class="frmSearch">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Nombre" name="nombre">
         </form>
         <div class="divBubbles">
             {% for post in posts %}
-            <span class="spnBubble">{{ post.tag }}</span> {% endfor %}
+            <span class="spnBubble"><a href="/?tag={{ post.tag }}">{{ post.tag }}</a></span> {% endfor %}
         </div>
         <hr class="hrHorizontal">
         <section>
             <h2>Recomendaciones</h2>
             {% for post in posts %}
+            {% if  forloop.counter <= 2 %}
             <article class="artRecomendation">
                 <a href="{{ post.get_absolute_url }}" class="imgRecomended">
                     <img src="/static/assets/images/enhanced-7530-1432661400-12.jpg">
@@ -47,8 +48,8 @@
                         <img src="/static/assets/images/photo.jpg">
                     </a>
                 </header>
-            </article>
-            {% endfor %}
+                </article>
+                {% endif %} {% endfor %}
         </section>
     </div>
 </div>
