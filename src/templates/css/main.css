@@ -98,6 +98,43 @@ header#hdrMain a.loginButton {
     float: right;
 }
 
+.cookie_div {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 50px 30px;
+    padding-bottom: 30px;
+    display: block;
+    background-color: #4D5A64;
+    color: #FFFFFF;
+    z-index: 1000;
+}
+
+.cookie_div div.cookie_text {
+    display: block;
+}
+
+.cookie_div div.cookie_button {
+    margin-top: 20px;
+    padding: 5px 30px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+
+div.darkMask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 80%;
+}
+
 @font-face {
     font-family: "Source Sans Pro";
     src: url("../fonts/Source Sans Pro.otf");
