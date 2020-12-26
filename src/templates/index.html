@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block head_title %}Mundo Desconocido{% endblock %} {% block extra_head %}
+<link href="/static/css/index.css" rel="stylesheet"> {% endblock %} {% block extra_body %}
+<div id="divContainer">
+    <div class="dinNews">
+        <div class="divSection">
+            <header>
+                <a href="">
+                    <h2>Maecenas ac tellus ut augue tincidunt dapibus</h2>
+                </a>
+                <p>Voluptatem necessitatibus aliquam et quae accusantium quisquam</p>
+                <a href="#" class="imgAuthor">
+                    <img src="/static/assets/images/photo.jpg">
+                </a>
+            </header>
+            <section>
+                <a href="#" class="imgNew">
+                    <img src="/static/assets/images/planet_x.png">
+                </a>
+                <p>Tempora ut quia iste explicabo rem porro et. Quibusdam quo sint laudantium. Ut aliquam magnam magni ea aut libero odio dolor. Doloribus sunt occaecati aperiam incidunt. Laborum consequat aliquip mollit proident deserunt commodo incididunt
+                    nulla anim aliqua do. Cillum id id sint qui irure velit veniam qui velit velit officia nulla ea. Eiusmod et sit eu pariatur eiusmod nostrud.</p>
+                <p>Mollit quis Lorem ex nostrud sint magna veniam eiusmod. Adipisicing duis ex eu sit amet consequat veniam nulla eu commodo. Ipsum labore voluptate nisi ad consectetur occaecat ut irure amet proident exercitation. Aliqua aute commodo occaecat
+                    sint incididunt qui occaecat eu eiusmod dolore magna. Aliqua ut veniam qui non voluptate occaecat. Et tempor nisi mollit incididunt esse dolore et sunt aliquam magnam magni ea aut.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis earum tenetur aliquid enim.</p>
+            </section>
+        </div>
+    </div>
+    <div class="divPanel">
+        <form class="frmSearch">
+            <input type="text" placeholder="Nombre" name="nombre">
+        </form>
+        <div class="divBubbles">
+            {% for post in posts %}
+            <span class="spnBubble"><a href="/?tag={{ post.tag }}">{{ post.tag }}</a></span> {% endfor %}
+        </div>
+        <hr class="hrHorizontal">
+        <section>
+            <h2>Recomendaciones</h2>
+            {% for post in posts %}
+            {% if  forloop.counter <= 2 %}
+            <article class="artRecomendation">
+                <a href="{{ post.get_absolute_url }}" class="imgRecomended">
+                    <img src="/static/assets/images/enhanced-7530-1432661400-12.jpg">
+                </a>
+                <header>
+                    <h3><a href="#">{{ post.nombre }}</a></h3>
+                    <time class="tmePublished" datetime="{{ post.time }}">{{ post.time }}</time>
+                    <a href="#" class="imgAuthor">
+                        <img src="/static/assets/images/photo.jpg">
+                    </a>
+                </header>
+                </article>
+                {% endif %} {% endfor %}
+        </section>
+    </div>
+</div>
+{% endblock extra_body %} {% block extra_scripts %}
+<script type="text/javascript">
+    setCurrentPage(0);
+</script>
+<script src="/static/js/cookies.js"></script>
+{% endblock extra_scripts %}

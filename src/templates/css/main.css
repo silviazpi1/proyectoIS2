@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #F4F4F4;
+    color: #676D79;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway Black", Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #3C3B3B;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    color: inherit;
+}
+
+a:hover {
+    border-bottom-color: transparent;
+    color: #2EBAAE;
+    transition: color 0.2s ease;
+}
+
+nav.navMenu ul li {
+    display: inline-block;
+}
+
+header#hdrMain {
+    width: 100%;
+    display: inline-block;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+header#hdrMain h1 {
+    display: inline-block;
+    padding: 17px 24px;
+    font-family: "Raleway", Helvetica, sans-serif;
+    border-right: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+header#hdrMain nav.navMenu {
+    display: inline-block;
+}
+
+header#hdrMain nav.navMenu ul li {
+    padding: 17px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: "Raleway", Helvetica, sans-serif;
+    color: #646464;
+}
+
+header#hdrMain nav.navMenu ul li a {
+    padding: 0 15px;
+    border-right: solid 1px rgba(160, 160, 160, 0.3);
+}
+
+header#hdrMain nav.navMenu ul li:first-child a {
+    padding: 0 15px 0 24px;
+}
+
+header#hdrMain nav.navMenu ul li:last-child a {
+    border: none;
+}
+
+header#hdrMain nav.navMenu ul li a.aCurrent {
+    color: #2EBAAE;
+}
+
+header#hdrMain a.loginButton {
+    padding: 17px 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: "Raleway", Helvetica, sans-serif;
+    color: #646464;
+    float: right;
+}
+
+.cookie_div {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 50px 30px;
+    padding-bottom: 30px;
+    display: block;
+    background-color: #4D5A64;
+    color: #FFFFFF;
+    z-index: 1000;
+}
+
+.cookie_div div.cookie_text {
+    display: block;
+}
+
+.cookie_div div.cookie_button {
+    margin-top: 20px;
+    padding: 5px 30px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+
+div.darkMask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 80%;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/Source Sans Pro.otf");
+}
+
+@font-face {    
+    font-family: "Raleway";
+    src: url("../fonts/Raleway Regular.ttf");
+}
+
+@font-face {    
+    font-family: "Raleway Light";
+    src: url("../fonts/Raleway-ExtraLight.ttf");
+}
+
+@font-face {    
+    font-family: "Raleway Black";
+    src: url("../fonts/Raleway-Black.ttf");
+}

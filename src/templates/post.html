@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block head_title %}{{ post.nombre }}{% endblock %} {% block extra_head %}
+<link href="/static/css/index.css" rel="stylesheet"> {% endblock %} {% block extra_body %}
+
+<!--Content-->
+<div id="divContainer">
+    <div class="divSection">
+        <h1>{{ post.nombre }}</h1>
+        <div class="divBubbles">
+            <span class="spnBubble">{{ post.tag }}</span>
+        </div>
+
+        <p>{{ post.descripcion }}</p>
+    </div>
+</div>
+<!--Content-->
+
+<hr>
+</main>
+{% endblock extra_body %} {% block extra_scripts %} {% endblock extra_scripts %}

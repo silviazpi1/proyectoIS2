@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% block head_title %} {% endblock %}</title>
+
+    <link href="{% static 'css/initialize.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet"> {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <header id="hdrMain">
+        <h1><a href="/index">Mundo Desconocido</a></h1>
+        <nav class="navMenu">
+            <ul>
+                <li><a class="navElement" href="/index">Inicio</a></li>
+                <li><a class="navElement" href="/about">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <a class="loginButton" href="/admin">Iniciar sesión</a>
+    </header>
+
+    {% block extra_body %}{% endblock %}
+    <hr>
+    <footer>
+        <div id="divContainer">
+            <div class="divSection">
+                <h2>Mundo Desconocido</h2>
+            </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/navigation.js' %}"></script>
+
+    {% block extra_scripts %}{% endblock extra_scripts %}
+</body>
+
+</html>
