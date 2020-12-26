@@ -3,7 +3,16 @@ from .models import Post
 
 def home(request):
     context = {}
-    posts = Post.objects.all()
+    nombre = request.GET.get("nombre")
+    tag = request.GET.get("tag")
+
+    if nombre:
+        posts = Post.objects.filter(nombre=nombre)
+    elif tag:
+        posts = Post.objects.filter(tag = tag)
+    else:
+        posts = Post.objects.all()
+
     context = {
         'posts': posts
     }
