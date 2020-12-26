@@ -135,6 +135,25 @@ div.darkMask {
     opacity: 80%;
 }
 
+footer.main_footer {
+    font-family: "Raleway", Helvetica, sans-serif;
+    width: 100%;
+    display: block;
+    padding-top: 2em;
+    padding-bottom: 6em;
+    text-align: center;
+    color: #3C3B3B;
+}
+  
+footer.main_footer:before {
+    content: '';
+    width: 200px;
+    height: 2px;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: #2EBAAE;
+}
+
 @font-face {
     font-family: "Source Sans Pro";
     src: url("../fonts/Source Sans Pro.otf");
