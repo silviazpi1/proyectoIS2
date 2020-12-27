@@ -5,22 +5,20 @@
         <div class="divSection">
             <header>
                 <a href="">
-                    <h2>Maecenas ac tellus ut augue tincidunt dapibus</h2>
+                    <h2>MUNDO DESCONOCIDO</h2>
                 </a>
-                <p>Voluptatem necessitatibus aliquam et quae accusantium quisquam</p>
-                <a href="#" class="imgAuthor">
-                    <img src="/static/assets/images/photo.jpg">
-                </a>
+                <p>HASTA EL INFINITO Y MÁS ALLÁ</p>
             </header>
             <section>
                 <a href="#" class="imgNew">
                     <img src="/static/assets/images/planet_x.png">
                 </a>
-                <p>Tempora ut quia iste explicabo rem porro et. Quibusdam quo sint laudantium. Ut aliquam magnam magni ea aut libero odio dolor. Doloribus sunt occaecati aperiam incidunt. Laborum consequat aliquip mollit proident deserunt commodo incididunt
-                    nulla anim aliqua do. Cillum id id sint qui irure velit veniam qui velit velit officia nulla ea. Eiusmod et sit eu pariatur eiusmod nostrud.</p>
-                <p>Mollit quis Lorem ex nostrud sint magna veniam eiusmod. Adipisicing duis ex eu sit amet consequat veniam nulla eu commodo. Ipsum labore voluptate nisi ad consectetur occaecat ut irure amet proident exercitation. Aliqua aute commodo occaecat
-                    sint incididunt qui occaecat eu eiusmod dolore magna. Aliqua ut veniam qui non voluptate occaecat. Et tempor nisi mollit incididunt esse dolore et sunt aliquam magnam magni ea aut.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis earum tenetur aliquid enim.</p>
+                <p>En este blog encontrarás desde las noticias más inéditas sobre el desconocido y gran universo en el que nos encontramos, hasta reseñas y pequeñas noticias sobre nuestros queridos planetas vecinos: nuevos descubrimientos de agua, pequeños
+                    seres vivos conjelados o incluso algún elemento nuevo inexistente para nosotros.</p>
+                <p>En Mundo Desconocido nos gusta compartir el conocimiento del desconocimiento, es decir que todo aquello que es desconocido por gran cantidad de la población deje de serlo y se vaya adentrando en un mundo de descubrimientos abismales e
+                    infinitos.</p>
+                <p>Esperemos que cada minuto que pases en nuestro blog sea lo más beneficiente para tu saber intelectual y cultural, no dudes en ponerte en contacto con nosotros si deseas que ampliemos sobre un tema, o conoces una noticia de interés general
+                    o que puede aportar un punto de inflexión para nuestro desconocimiento.</p>
             </section>
         </div>
     </div>
@@ -35,9 +33,8 @@
         <hr class="hrHorizontal">
         <section>
             <h2>Recomendaciones</h2>
-            {% for post in posts %}
-            {% if  forloop.counter <= 2 %}
-            <article class="artRecomendation">
+            {% for post in posts %} {% if forloop.counter
+            <=2 %} <article class="artRecomendation">
                 <a href="{{ post.get_absolute_url }}" class="imgRecomended">
                     <img src="/static/assets/images/enhanced-7530-1432661400-12.jpg">
                 </a>

@@ -1,12 +1,28 @@
-{% extends "base.html" %} {% block head_title %}Sobre nosotros{% endblock %}
+{% extends "base.html" %} {% block head_title %}Sobre nosotros{% endblock %} {% block extra_body %}
 
-{% block extra_body %}
+<h1>¿Quiénes somos?</h1>
+<p>
+    Somos un blog con temática del universo, en el que encontraréis reseñas, noticias y varios temas de interés sobre el gigantesco y desconocido universo en el que nos encontramos. Los planetas que nos rodean, el sistema en el que nos encontramos, nuestra
+    galaxia y sus vecinas; nuevos descubrimientos de posible habitabilidad, planetas con similitud a la Tierra. Todo esto y más es lo que encontraréis aquí.
+</p>
+<br>
 
-Hola
+<div class="img-about">
 
-{% endblock extra_body %}
+    Aquí podrían ir un par de imágenes o un carrousel centrado
 
-{% block extra_scripts %}
+</div>
+
+<h1>Equipo de Investigación/Desarrollo</h1>
+<ul>
+    <li>Silvia</li>
+    <li>Enrique Ruíz Ruíz </li>
+    <li>Fernando</li>
+    <li>Guillermo Blasco Pérez</li>
+    <li>Adrián Murillo</li>
+</ul>
+
+{% endblock extra_body %} {% block extra_scripts %}
 <script type="text/javascript">
     setCurrentPage(1);
 </script>
