@@ -1,4 +1,4 @@
-from django.db import models
+from djongo import models
 
 class Post(models.Model):
     nombre = models.CharField(max_length=100)
@@ -6,7 +6,7 @@ class Post(models.Model):
     descripcion = models.CharField(max_length=10000, verbose_name='descripción')
     foto = models.ImageField(upload_to='posts', default='')
     slug = models.SlugField(unique=True)
-    time = models.TimeField(auto_now=True)
+    time = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.nombre

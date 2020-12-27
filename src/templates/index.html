@@ -33,14 +33,13 @@
         <hr class="hrHorizontal">
         <section>
             <h2>Recomendaciones</h2>
-            {% for post in posts %} {% if forloop.counter
-            <=2 %} <article class="artRecomendation">
+            {% for post in posts %} {% if forloop.counter <= 2 %} <article class="artRecomendation">
                 <a href="{{ post.get_absolute_url }}" class="imgRecomended">
                     <img src="/static/assets/images/enhanced-7530-1432661400-12.jpg">
                 </a>
                 <header>
                     <h3><a href="#">{{ post.nombre }}</a></h3>
-                    <time class="tmePublished" datetime="{{ post.time }}">{{ post.time }}</time>
+                    <time class="tmePublished" datetime="{{ post.time }}"> {{ post.time }}</time>
                     <a href="#" class="imgAuthor">
                         <img src="/static/assets/images/photo.jpg">
                     </a>
