@@ -1,5 +1,11 @@
 Django
 django-environ
 djongo
-Pillow
 dnspython
+django-richtextfield
+
+dj-database-url
+django-heroku
+gunicorn
+python-decouple
+whitenoise
