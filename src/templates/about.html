@@ -1,24 +1,26 @@
 {% extends "base.html" %} {% block head_title %}Sobre nosotros{% endblock %} {% block extra_body %}
+<link href="/static/css/about.css" rel="stylesheet">
 
-<h1>¿Quiénes somos?</h1>
-<p>
-    Somos un blog con temática del universo, en el que encontraréis reseñas, noticias y varios temas de interés sobre el gigantesco y desconocido universo en el que nos encontramos. Los planetas que nos rodean, el sistema en el que nos encontramos, nuestra
-    galaxia y sus vecinas; nuevos descubrimientos de posible habitabilidad, planetas con similitud a la Tierra. Todo esto y más es lo que encontraréis aquí.
-</p>
-<br>
-
-<img src="/static/assets/images/1182616.gif">
-<div style="margin: auto;">
-    <h1>Equipo de Investigación/Desarrollo</h1>
+<div class="aboutContainer">
+    <div class="divSection">
+        <header>
+            <h2>¿Quiénes somos?</h2>
+        </header>
+        <section>
+            <p>Somos un blog con temática del universo, en el que encontraréis reseñas, noticias y varios temas de interés sobre el gigantesco y desconocido universo en el que nos encontramos. Los planetas que nos rodean, el sistema en el que nos encontramos, nuestra
+                galaxia y sus vecinas; nuevos descubrimientos de posible habitabilidad, planetas con similitud a la Tierra. Todo esto y más es lo que encontraréis aquí.</p>
+            <img src="/static/assets/images/1182616.gif">
+        </section>
+        <h1>Equipo de Investigación/Desarrollo</h1>
+        <ul>
+            <li>Silvia Romero Azpitarte</li>
+            <li>Enrique Ruiz Ruiz </li>
+            <li>Fernando Pérez Lara</li>
+            <li>Guillermo Blasco Pérez</li>
+            <li>Adrián Murillo Prieto</li>
+        </ul>
+    </div>
 </div>
-
-<ul>
-    <li>Silvia Romero Azpitarte</li>
-    <li>Enrique Ruiz Ruiz </li>
-    <li>Fernando Pérez Lara</li>
-    <li>Guillermo Blasco Pérez</li>
-    <li>Adrián Murillo Prieto</li>
-</ul>
 
 {% endblock extra_body %} {% block extra_scripts %}
 <script type="text/javascript">
