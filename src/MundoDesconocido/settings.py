@@ -153,3 +153,5 @@ DJRICHTEXTFIELD_CONFIG = {
         'width': 700
     }
 }
+
+django_heroku.settings(locals())
