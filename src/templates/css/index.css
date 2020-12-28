@@ -119,6 +119,15 @@ span.spnBubble {
     margin-bottom: 4px;
 }
 
+span.spnBubble:hover {
+    background-color: #29afa4 !important;
+    transition: all 1s linear;
+}
+
+span.spnBubble a:hover {
+    color: #FFFFFF !important;
+}
+
 hr.hrHorizontal {
     width: 100%;
     height: 1px;
