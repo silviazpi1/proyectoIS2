@@ -6,7 +6,7 @@ class Post(models.Model):
     nombre = models.CharField(max_length=100)
     tag = models.CharField(max_length=100)
     descripcion = RichTextField(verbose_name='descripción')
-    foto = models.ImageField(upload_to='posts', default='')
+    foto = models.CharField(max_length=500)
     slug = models.SlugField(unique=True)
     time = models.DateField(auto_now=True)
 

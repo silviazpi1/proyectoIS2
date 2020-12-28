@@ -21,6 +21,17 @@
                     o que puede aportar un punto de inflexión para nuestro desconocimiento.</p>
             </section>
         </div>
+
+        <h2 class="post_title">PUBLICACIONES</h2>
+
+        {% for post in posts %}
+        <div class="divSection posteado">
+            
+            <a href="{{ post.get_absolute_url }}">{{ post.nombre }}</a><br>
+            <time class="tmePublished" datetime="{{ post.time }}"> {{ post.time }}</time>
+            
+        </div>
+        {% endfor %}
     </div>
     <div class="divPanel">
         <form class="frmSearch">
@@ -35,10 +46,10 @@
             <h2>Últimos posts</h2>
             {% for post in posts %} {% if forloop.counter <= 2 %} <article class="artRecomendation">
                 <a href="{{ post.get_absolute_url }}" class="imgRecomended">
-                    <img src="/static/assets/images/enhanced-7530-1432661400-12.jpg">
+                    <img src="{{ post.foto }}">
                 </a>
                 <header>
-                    <h3><a href="#">{{ post.nombre }}</a></h3>
+                    <h3><a href="{{ post.get_absolute_url }}">{{ post.nombre }}</a></h3>
                     <time class="tmePublished" datetime="{{ post.time }}"> {{ post.time }}</time>
                     <a href="#" class="imgAuthor">
                         <img src="/static/assets/images/photo.jpg">

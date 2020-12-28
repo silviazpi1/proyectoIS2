@@ -135,6 +135,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "templates/")]
 
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = '/media/'
+
+# Rich text config
+
 DJRICHTEXTFIELD_CONFIG = {
     'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
     'init_template': 'djrichtextfield/init/tinymce.js',

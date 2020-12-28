@@ -47,7 +47,7 @@ div#divContainer div.dinNews div.divSection header a.imgAuthor img {
 
 div#divContainer div.dinNews div.divSection section {
     padding: 0 50px 50px 50px;
-} 
+}
 
 div#divContainer div.dinNews div.divSection section a.imgNew {
     width: 100%;
@@ -183,7 +183,7 @@ section article.artRecomendation a.imgRecomended img {
 }
 
 section article.artRecomendation a.imgRecomended img:hover {
-     transform: scale(1.01);
+    transform: scale(1.01);
 }
 
 section article.artRecomendation header a.imgAuthor {
@@ -197,4 +197,18 @@ section article.artRecomendation header a.imgAuthor img {
     width: 45px;
     display: block;
     border-radius: 100%;
+}
+
+div.posteado {
+    padding: 10px 50px;
+    margin-bottom: 15px !important;
+}
+
+div.posteado a {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post_title {
+    margin-bottom: 20px;
 }
