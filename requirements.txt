@@ -7,5 +7,8 @@ django-richtextfield
 dj-database-url
 django-heroku
 gunicorn
+psycopg2
 python-decouple
 whitenoise
+
+//heroku addons:remove shared-database:5mb
