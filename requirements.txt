@@ -8,6 +8,6 @@ django-richtextfield
 dj-database-url
 django-heroku
 gunicorn
-psycopg2
+psycopg2-binary
 python-decouple
 whitenoise

@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import dj_database_url
-import django_heroku
+""" import dj_database_url
+import django_heroku """
 
 from pathlib import Path
 import os
@@ -31,7 +31,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -154,4 +154,4 @@ DJRICHTEXTFIELD_CONFIG = {
     }
 }
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
