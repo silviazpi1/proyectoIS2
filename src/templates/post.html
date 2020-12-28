@@ -9,7 +9,7 @@
             <span class="spnBubble">{{ post.tag }}</span>
         </div>
 
-        <p>{{ post.descripcion }}</p>
+        {{ post.descripcion|safe }}
     </div>
 </div>
 <!--Content-->

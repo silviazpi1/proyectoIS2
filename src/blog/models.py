@@ -1,9 +1,11 @@
 from djongo import models
+from djrichtextfield.models import RichTextField
+
 
 class Post(models.Model):
     nombre = models.CharField(max_length=100)
     tag = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=10000, verbose_name='descripción')
+    descripcion = RichTextField(verbose_name='descripción')
     foto = models.ImageField(upload_to='posts', default='')
     slug = models.SlugField(unique=True)
     time = models.DateField(auto_now=True)

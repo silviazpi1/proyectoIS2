@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
+from django.conf.urls import include
 from blog.views import (
     home,
     about,
@@ -34,4 +35,6 @@ urlpatterns = [
     path('index/', home, name='home'),
     path('about/', about, name='about'),
     path('<slug>/', post, name='post'),
+    path('djrichtextfield/', include('djrichtextfield.urls'))
 ]
+

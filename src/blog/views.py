@@ -26,4 +26,5 @@ def post(request, slug):
     context = {
         'post': post
     }
+    print(post)
     return render(request, "post.html", context)
