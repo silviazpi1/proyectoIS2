@@ -1,1 +1,1 @@
-web: gunicorn src/MundoDesconocido.wsgi --log-file -
+web: gunicorn --pythonpath src MundoDesconocido.wsgi
