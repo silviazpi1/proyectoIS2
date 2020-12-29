@@ -1,0 +1,1 @@
+web: gunicorn src/MundoDesconocido.wsgi --log-file -
