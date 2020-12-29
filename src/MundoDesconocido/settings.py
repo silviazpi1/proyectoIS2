@@ -10,12 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import dj_database_url
-import django_heroku
-
-from pathlib import Path
 import os
 import environ
+
+import django_heroku
+
 
 env = environ.Env()
 environ.Env.read_env()
@@ -139,7 +138,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "templates/")]
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, '/static/'))
 
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Rich text config
