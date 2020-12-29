@@ -2,7 +2,7 @@
 
 Mundo Desconocido se trata de un blog con temática sobre el **universo y el espacio**, desarrollado con Django y MongoDB para la asignatura de Ingeniería de Software 2.
 
-Puedes visitar nuestra página web en [mundo-desconocido.herokuapp.com](mundo-desconocido.herokuapp.com).
+Puedes visitar nuestra página web en [mundo-desconocido.herokuapp.com](http://mundo-desconocido.herokuapp.com).
 
 ## Partes del proyecto 📑
 - Inicio de Sesión
