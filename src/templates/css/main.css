@@ -162,6 +162,10 @@ header#hdrMain nav.navMenu {
     display: inline-block;
 }
 
+li.loginMobile {
+    display: none !important;
+}
+
 @media screen and (max-width: 780px) {
     header#hdrMain nav.navMenu {
         position: absolute;
@@ -183,6 +187,9 @@ header#hdrMain nav.navMenu {
     }
     li a {
         padding: 0px 25px !important;
+    }
+    li.loginMobile {
+        display: block !important;
     }
 }
 
@@ -337,4 +344,8 @@ footer.main_footer:before {
 @font-face {
     font-family: "Raleway Black";
     src: url("../fonts/Raleway-Black.ttf");
+}
+
+caption {
+    caption-side: top;
 }

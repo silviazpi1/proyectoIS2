@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block head_title %}Mundo Desconocido{% endblock %} {% block extra_head %}
 <link href="/static/css/index.css" rel="stylesheet"> {% endblock %} {% block extra_body %}
-<div id="divContainer">
+<div id="divContainer" class="jumbotron jumbotron-fluid">
     <div class="dinNews">
         <div class="divSection">
             <header>
@@ -11,7 +11,7 @@
             </header>
             <section>
                 <a href="#" class="imgNew">
-                    <img src="/static/assets/images/planet_x.png">
+                    <img src="/static/assets/images/planet_x.png" class="img-fluid">
                 </a>
                 <p>En este blog encontrarás desde las noticias más inéditas sobre el desconocido y gran universo en el que nos encontramos, hasta reseñas y pequeñas noticias sobre nuestros queridos planetas vecinos: nuevos descubrimientos de agua, pequeños
                     seres vivos conjelados o incluso algún elemento nuevo inexistente para nosotros.</p>
@@ -46,13 +46,13 @@
             <h2>Últimos posts</h2>
             {% for post in posts %} {% if forloop.counter <= 2 %} <article class="artRecomendation">
                 <a href="{{ post.get_absolute_url }}" class="imgRecomended">
-                    <img src="{{ post.foto }}">
+                    <img src="{{ post.foto }}" class="img-fluid">
                 </a>
                 <header>
                     <h3><a href="{{ post.get_absolute_url }}">{{ post.nombre }}</a></h3>
                     <time class="tmePublished" datetime="{{ post.time }}"> {{ post.time }}</time>
                     <a href="#" class="imgAuthor">
-                        <img src="/static/assets/images/photo.jpg">
+                        <img src="/static/assets/images/photo.jpg" class="img-fluid">
                     </a>
                 </header>
                 </article>

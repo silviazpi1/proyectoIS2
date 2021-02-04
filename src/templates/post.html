@@ -1,17 +1,54 @@
 {% extends "base.html" %} {% block head_title %}{{ post.nombre }}{% endblock %} {% block extra_head %}
-<link href="/static/css/index.css" rel="stylesheet"> {% endblock %} {% block extra_body %}
+<link href="/static/css/index.css" rel="stylesheet"> 
+<style>
+div.divSection {
+    margin: 10 20px;
+    padding: 3%;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    background-color: #FFFFFF;
+}
+
+div.divSection header {
+    padding: 50px 130px 20px 50px;
+    position: relative;
+}
+
+.jumbotron-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.center {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.container{
+    margin-top:20px;
+}
+</style>{% endblock %} {% block extra_body %}
 
 <!--Content-->
-<div id="divContainer">
+<!--<div id="divContainer container-fluid">-->
+<div class="container">
+    <div class = "row ">
     <div class="divSection">
-        <h1>{{ post.nombre }}</h1>
+        <div class="header">
+            <h1>{{ post.nombre }}</h1>
+        </div>
         <div class="divBubbles">
             <span class="spnBubble">{{ post.tag }}</span>
         </div>
 
-        <img src="{{ post.foto }}"> 
+        <div class="center">
+            <img src="{{ post.foto }}" class="img-fluid"> 
+        </div>
+        
         {{ post.descripcion|safe }}
     </div>
+</div>
 </div>
 <!--Content-->
 

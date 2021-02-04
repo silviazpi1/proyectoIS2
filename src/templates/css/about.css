@@ -1,34 +1,54 @@
-div.aboutContainer {
+div.divSection {
     padding: 50px 200px;
 }
 
-div.aboutContainer div.divSection {
+div.divSection {
     margin-bottom: 50px;
     border: solid 1px rgba(160, 160, 160, 0.3);
     background-color: #FFFFFF;
     padding: 50px;
 }
 
-div.aboutContainer div.divSection header {
+div.divSection header {
     position: relative;
     margin-bottom: 20px;
 }
 
-div.aboutContainer div.divSection p {
+div.divSection p {
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
-div.aboutContainer div.divSection h1 {
+div.divSection h1 {
     margin-top: 30px;
     margin-bottom: 15px;
+    margin-left: 10px;
 }
 
-div.aboutContainer div.divSection ul {
+div.divSection ul {
     list-style: disc;
-    margin: 0 20px;
+    margin: 10 20px;
 }
 
-img {
-    display:block;
-    margin:auto;
+div.center {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+div.divSection {
+    margin: 10 20px;
+    padding: 3%;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    background-color: #FFFFFF;
+}
+
+div.divSection header {
+    padding: 50px 130px 20px 50px;
+    position: relative;
+}
+
+.jumbotron-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
 }

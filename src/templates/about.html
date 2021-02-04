@@ -1,18 +1,19 @@
 {% extends "base.html" %} {% block head_title %}Sobre nosotros{% endblock %} {% block extra_body %}
 <link href="/static/css/about.css" rel="stylesheet">
 
-<div class="aboutContainer">
+<div class="jumbotron jumbotron-fluid">
     <div class="divSection">
-        <header>
-            <h2>¿Quiénes somos?</h2>
-        </header>
-        <section>
-            <p>Somos un blog con temática del universo, en el que encontraréis reseñas, noticias y varios temas de interés sobre el gigantesco y desconocido universo en el que nos encontramos. Los planetas que nos rodean, el sistema en el que nos encontramos,
-                nuestra galaxia y sus vecinas; nuevos descubrimientos de posible habitabilidad, planetas con similitud a la Tierra. Todo esto y más es lo que encontraréis aquí.</p>
-            <p>Para <b>contribuir con nosotros</b> y tener acceso a la publicación y actualización del contenido puedes ponerte en contacto con nosotros (mundodesconocido@gmail.com) y optar a la posición de <a href="/admin/login">usuario certificado</a>,
-                con todas las ventajas que ello conlleva.</p>
-            <img src="/static/assets/images/1182616.gif">
-        </section>
+        <div class="header">
+            <h1>¿Quiénes somos?</h1>
+        </div>
+        <p>Somos un blog con temática del universo, en el que encontraréis reseñas, noticias y varios temas de interés sobre el gigantesco y desconocido universo en el que nos encontramos. Los planetas que nos rodean, el sistema en el que nos encontramos,
+            nuestra galaxia y sus vecinas; nuevos descubrimientos de posible habitabilidad, planetas con similitud a la Tierra. Todo esto y más es lo que encontraréis aquí.</p>
+        <p>Para <b>contribuir con nosotros</b> y tener acceso a la publicación y actualización del contenido puedes ponerte en contacto con nosotros (mundodesconocido@gmail.com) y optar a la posición de <a href="/admin/login">usuario certificado</a>,
+            con todas las ventajas que ello conlleva.</p>
+        <div class="center">
+            <img src="/static/assets/images/1182616.gif" class="img-fluid" style="margin: 0 auto">
+        </div>
+        <div class="block-center">
         <h1>Equipo de Investigación/Desarrollo</h1>
         <ul>
             <li>Silvia Romero Azpitarte</li>
@@ -24,7 +25,7 @@
     </div>
 </div>
 
-{% endblock extra_body %} {% block extra_scripts %}
+ {% endblock extra_body %} {% block extra_scripts %}
 <script type="text/javascript">
     setCurrentPage(1);
 </script>

@@ -1,6 +1,22 @@
 div#divContainer {
-    padding: 50px 200px;
+    padding: 50px 15%;
     display: flex;
+}
+
+@media screen and (max-width: 780px) {
+    div#divContainer {
+        display: block;
+        padding: 50px 10px;
+    }
+    div#divContainer div.dinNews {
+        margin-right: 0px !important;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    div#divContainer {
+        padding: 50px 10px;
+    }
 }
 
 div#divContainer div.dinNews {
@@ -82,8 +98,15 @@ div#divContainer div.divPanel {
     margin-left: 25px;
 }
 
+@media screen and (max-width: 780px) {
+    div#divContainer div.divPanel {
+        width: 100%;
+        margin-left: 0px !important;
+    }
+}
+
 div#divContainer div.divPanel form.frmSearch input {
-    width: 308px;
+    width: 100%;
     padding: 12px 20px;
     outline: none;
     border: 1px solid rgba(160, 160, 160, 0.3);
