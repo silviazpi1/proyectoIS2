@@ -11,7 +11,7 @@ def home(request):
     elif tag:
         posts = Post.objects.filter(tag = tag)
     else:
-        posts = Post.objects.all()
+        posts = Post.objects.all().order_by('-time')
 
     context = {
         'posts': posts
