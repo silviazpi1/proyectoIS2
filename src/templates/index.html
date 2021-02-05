@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block head_title %}Mundo Desconocido{% endblock %} {% block extra_head %}
+{% extends "base.html" %} 
+{% load static %}{% block head_title %}Mundo Desconocido{% endblock %} {% block extra_head %}
 <link href="/static/css/index.css" rel="stylesheet"> {% endblock %} {% block extra_body %}
 <div id="divContainer" class="jumbotron jumbotron-fluid">
     <div class="dinNews">
@@ -64,5 +65,5 @@
 <script type="text/javascript">
     setCurrentPage(0);
 </script>
-<script src="/static/js/cookies.js"></script>
+<script src="{% static 'js/cookies.js' %}"></script>
 {% endblock extra_scripts %}
